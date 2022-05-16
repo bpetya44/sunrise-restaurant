@@ -2,18 +2,26 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    font-size: 16px
 }
 
 .banner {
     height: 80vh;
     min-height: 500px;
     background: rgba(15, 15, 16, 0.918);
-    background-image: url(./images/desktop/pizza-3525673_1920.jpg);
+    background-image: url(./images/desktop/326281.jpg);
     position: relative;
     background-size:cover;
     /* background-repeat: no-repeat; */
-   background-position: center;
+   background-position: right;
    background-attachment: fixed;
+}
+@media only screen and (max-width: 780px){
+    .banner{
+        background-image: url(./images/desktop/842571.jpg);
+        background-size: contain;
+        background-position: top;
+    }
 }
 
 .layer {
@@ -38,23 +46,26 @@
 
 .menu, .footer-menu {
     display: flex;
-    font-size: 20px;
+    font-size: 1.5em;
     color: white;
     align-items: center;
     cursor: pointer;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .menu span, .footer-menu span {
     margin-right: 30px;
     margin-left: 30px;
+    font-size: 1em;
 }
 
 .contact{
     background-color: white;
     color: black;
     padding: 4px 15px;
-    border-radius: 15px
+    border-radius: 15px;
+    font-size: .8em;
+
 }
 
 .contact:hover{
@@ -67,12 +78,23 @@
     color: white;
     text-shadow: 2px 0px 3px #0f0e0e;
     font-weight: 800;
-    font-size: 2em;
+    justify-content: center;
     text-transform:capitalize;
-    text-align: left;
+    text-align: center;
     margin: 30px 20px;
-    
 }
+
+.main h1{
+    font-size: 5em;
+}
+@media only screen and (max-width: 780px){
+    .main h1{
+        font-size: 3.5em;
+    }
+
+}
+    
+
 
 .section1, .section2{
     display: flex;
@@ -96,7 +118,7 @@
 }
 
 .left h2{
-    font-size: 40px;
+    font-size: 1.2em;
     margin-bottom: 8px;
 
 }
@@ -189,18 +211,19 @@ a:hover{
     font-size: 12px;
     color: #848391;
 }
+
 .examples{
  display: flex;
  flex-wrap: wrap;
+ justify-content: flex-start;
 
 }
 
-.examples div{
-    flex: 0.25;
-    min-width: 200px;
-
+.examples >div{
+    width: 25%;
+    box-sizing: border-box;
 }
-.examples img{
+.examples>div img{
     width: 100%;
 
 }
@@ -225,7 +248,8 @@ a:hover{
     margin-top: 30px;
 }
 .social-media img{
-    padding: 5px
+    padding: 10px;
+    margin-bottom: 40px;
 }
 
 .attribution{
